@@ -1,0 +1,45 @@
+/*
+ * Trove v3 design tokens.
+ *
+ * The 16 tokens in the first block are the assessment's "Color palette
+ * (Trove v3)" reproduced exactly, hex-for-hex. The small second block holds
+ * hover / status shades the base palette doesn't enumerate — each is the same
+ * hue as a palette colour, lighter or darker, following the palette's own
+ * pattern (Primary #059A83 -> Primary light #E0F5E1).
+ */
+:root {
+  /* --- Trove v3 palette (exact) --- */
+  --color-primary: #059a83; /* Primary (Trove Green) — buttons, active, links */
+  --color-primary-light: #e0f5e1; /* Primary light — badges, subtle backgrounds */
+  --color-positive: #10ae17; /* Success / positive — gains */
+  --color-negative: #bf221c; /* Negative / loss — losses, errors */
+  --color-canvas: #fbfbfb; /* Background canvas — page background */
+  --color-surface: #ffffff; /* Card surface — card backgrounds */
+  --color-page: #f5f1ee; /* Page background — outer page background */
+  --color-fill: #f2f6f6; /* Background default — inputs, neutral fills */
+  --color-text: #13342f; /* Text default — headings, primary text */
+  --color-text-muted: #687d7a; /* Text neutral — labels, secondary text */
+  --color-text-faint: #92a29f; /* Text disabled — placeholders, muted text */
+  --color-border: #dbdfdf; /* Border — card borders, dividers */
+  --color-info: #00b6df; /* Accent blue — highlights, info states */
+  --color-purple: #7b79c9; /* Purple — chart segments */
+  --color-cream: #f2c891; /* Cream — chart segments */
+  --color-dark: #00323d; /* Dark blue — dark backgrounds */
+
+  /* --- Derived state shades (same hue as a palette colour) --- */
+  --color-primary-strong: #04735f; /* darker Primary — hover / emphasis */
+  --color-negative-light: #f9e7e6; /* light Negative — error / failed badges */
+  --color-cream-light: #fbeedd; /* light Cream — pending / order badges */
+  --color-cream-text: #8a5a25; /* dark Cream — legible text on cream */
+
+  --radius-card: 16px;
+  --radius-control: 10px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(19, 52, 47, 0.04), 0 6px 20px rgba(19, 52, 47, 0.05);
+  --shadow-raised: 0 12px 32px rgba(19, 52, 47, 0.12);
+
+  --font-sans: 'Inter', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --sidebar-width: 248px;
+}
