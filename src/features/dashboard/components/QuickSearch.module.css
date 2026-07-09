@@ -1,0 +1,202 @@
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+.inputRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 13px;
+  color: var(--color-text-faint);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 38px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: var(--color-fill);
+  font-size: 13.5px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.input::placeholder {
+  color: var(--color-text-faint);
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+}
+
+.clear {
+  position: absolute;
+  right: 8px;
+  padding: 5px;
+  border-radius: 7px;
+  color: var(--color-text-faint);
+  display: grid;
+  place-items: center;
+}
+
+.clear:hover {
+  color: var(--color-text);
+  background: rgba(19, 52, 47, 0.06);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-raised);
+  overflow: hidden;
+  animation: dropIn 0.16s ease-out;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.option,
+.optionActive {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: var(--radius-control);
+  text-align: left;
+  transition: background 0.12s ease;
+}
+
+.optionActive {
+  background: var(--color-fill);
+}
+
+.stockMark,
+.buyMark,
+.sellMark {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.stockMark {
+  background: var(--color-primary-light);
+  color: var(--color-primary-strong);
+}
+
+.buyMark {
+  background: var(--color-primary-light);
+  color: var(--color-primary-strong);
+}
+
+.sellMark {
+  background: var(--color-fill);
+  color: var(--color-text-muted);
+}
+
+.optionMain {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.optionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.optionSub {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tagStock,
+.tagOrder {
+  flex-shrink: 0;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.tagStock {
+  background: var(--color-primary-light);
+  color: var(--color-primary-strong);
+}
+
+.tagOrder {
+  background: var(--color-cream-light);
+  color: var(--color-cream-text);
+}
+
+.empty {
+  padding: 20px 14px;
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-top: 1px solid var(--color-border);
+  font-size: 10.5px;
+  color: var(--color-text-faint);
+}
+
+.hint kbd {
+  padding: 1px 5px;
+  border-radius: 5px;
+  background: var(--color-fill);
+  border: 1px solid var(--color-border);
+  font-family: inherit;
+  font-size: 10px;
+}
+
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

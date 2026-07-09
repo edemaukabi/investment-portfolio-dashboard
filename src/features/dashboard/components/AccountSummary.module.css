@@ -1,0 +1,66 @@
+.heading {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 16px 18px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.positions {
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
+
+/* Card value — 14px medium per the type spec */
+.value {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.changeUp,
+.changeDown {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.changeUp {
+  color: var(--color-positive);
+}
+
+.changeDown {
+  color: var(--color-negative);
+}
